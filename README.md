@@ -3,6 +3,18 @@
 # About the application
 
 That's a simple taxi web application, which can work with basic CRUD operations.
+
+# Features 
+* registration like a driver
+* autethentication like a driver
+* create/update/remove a manufacturer
+* create/update/remove a driver
+* create/update/remove a car
+* display list of all manufacturers
+* add driver to car
+* get cars for current autenthicated driver
+* logout system
+
 # Structure of the project
 
 Application has basic structure with adherence to all SOLID principles and N-tier architecture :
@@ -23,6 +35,13 @@ Application has basic structure with adherence to all SOLID principles and N-tie
 * **CSS**
 * **SQL**
 
+# Required software versions
+* Java SE Development Kit 11.0.17
+* git 2.40.0
+* Apache Maven 3.9.1
+* MySQL 8.0.32
+* Apache Tomcat 9.0.73
+
 # Installation
 1. IntelliJ IDEA <sub> [download link](https://www.jetbrains.com/idea/download/#section=windows) </sub>, JDK<sub> [download link](https://www.oracle.com/cis/java/technologies/javase/jdk11-archive-downloads.html) </sub> should be installed on your PC
 
@@ -40,7 +59,15 @@ Application has basic structure with adherence to all SOLID principles and N-tie
 
 8. From your recently made repository click Code button, choose SSH and paste the link into IntelliJ IDEA ![image](https://user-images.githubusercontent.com/118058456/227192265-c8d209e6-1ad6-4ac0-8827-1649eabd7c2a.png)
 
-9. Now change parameters in `ConnectionUtil` for connecting to DB.
+9. Now you need to go to `src/main/java/taxi/util/ConnectionUtil.java` and insert your params for connection to DB, there you'll see such fields 
+
+
+![image](https://user-images.githubusercontent.com/118058456/227914556-74f18069-fc63-477a-a1dc-ccc3ac6f8198.png)
+
+* Into `URL` field you need to insert url for connection to your database, it will be presented as `jdbc:mysql://localhost:3306/<your_db_name>`
+* Into `USERNAME` field you need to insert `root`, or you username that you have choosen while have been setupping MySQL.
+* Into `PASSWORD` field you need to insert password that you have choosen while have been setupping MySQL.
+* Into `JDBC_DRIVER` field you need to insert driver `MySQL.com.mysql.cj.jdbc.Driver`
 
 10. Install Apache Tomcat <sub> [download link](https://tomcat.apache.org/download-90.cgi) </sub>, add configuration for your project here ![image](https://user-images.githubusercontent.com/118058456/227192947-02e1e248-78d0-4085-a748-1ca2804f2409.png)
 
